@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('public/head.ejs') %>
+    <h1><%= data.age %>
+        <%= data.job %></h1>
+    <h2>hioho</h2>
+    <ul>
+        <% data.hioho.forEach(function(item){ %>
+
+            <li><%= item %></li>
+        <% }) %>
+
+
+    </ul>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <h3>单图上传</h3>
+        <input type="file" name='logo'>
+        <input type="submit" name="提交">
+    </form>
+
+</body>
+
+</html>
